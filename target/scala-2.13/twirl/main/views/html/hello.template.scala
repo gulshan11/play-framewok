@@ -29,18 +29,23 @@ object hello extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
       {
 
 
-Seq[Any](_display_(/*2.2*/main("Hello")/*2.15*/ {_display_(Seq[Any](format.raw/*2.17*/("""
-  """),format.raw/*3.3*/("""<section id="content">
-    <div class="wrapper doc">
-      <article>
-        <h1>Hello """),_display_(/*6.20*/name),format.raw/*6.24*/("""</h1>
-      </article>  
-      <!-- <aside>
-        """),_display_(/*9.10*/commonSidebar()),format.raw/*9.25*/("""
-      """),format.raw/*10.7*/("""</aside> -->
-    </div>
-  </section>
-""")))}))
+Seq[Any](format.raw/*1.16*/(""" """),_display_(/*1.18*/main("Hello")/*1.31*/ {_display_(Seq[Any](format.raw/*1.33*/("""
+"""),format.raw/*2.1*/("""<section id="content">
+	<div class="wrapper doc">
+		<article>
+			<h1>Hello """),_display_(/*5.15*/name),format.raw/*5.19*/("""</h1>
+		</article>
+		<!-- <aside>
+        """),_display_(/*8.10*/commonSidebar()),format.raw/*8.25*/("""
+      """),format.raw/*9.7*/("""</aside> -->
+		<!-- 		<script>
+			var ws = new WebSocket("ws://localhost:9000/ws");
+			console.log(ws)
+		</script> -->
+	</div>
+</section>
+""")))}),format.raw/*16.2*/("""
+"""))
       }
     }
   }
@@ -56,11 +61,11 @@ Seq[Any](_display_(/*2.2*/main("Hello")/*2.15*/ {_display_(Seq[Any](format.raw/*
 
               /*
                   -- GENERATED --
-                  DATE: 2020-03-12T11:07:15.494
+                  DATE: 2020-03-13T12:38:21.901
                   SOURCE: /home/gulshan/Documents/projects/rockwell_airport/collins2020/simulator/examples/hello-world/app/views/hello.scala.html
-                  HASH: 957c865b9b5f55e6543733378d3ed2d2067bb9ca
-                  MATRIX: 908->1|1016->17|1037->30|1076->32|1105->35|1219->123|1243->127|1322->180|1357->195|1391->202
-                  LINES: 27->1|32->2|32->2|32->2|33->3|36->6|36->6|39->9|39->9|40->10
+                  HASH: 58c1dc354c4590b2002e1b55fef6f782cb696e7f
+                  MATRIX: 908->1|1017->15|1045->17|1066->30|1105->32|1132->33|1234->109|1258->113|1327->156|1362->171|1395->178|1564->317
+                  LINES: 27->1|32->1|32->1|32->1|32->1|33->2|36->5|36->5|39->8|39->8|40->9|47->16
                   -- GENERATED --
               */
           

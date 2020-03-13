@@ -1,13 +1,16 @@
-@(name: String)
-@main("Hello") {
-  <section id="content">
-    <div class="wrapper doc">
-      <article>
-        <h1>Hello @name</h1>
-      </article>  
-      <!-- <aside>
+@(name: String) @main("Hello") {
+<section id="content">
+	<div class="wrapper doc">
+		<article>
+			<h1>Hello @name</h1>
+		</article>
+		<!-- <aside>
         @commonSidebar()
       </aside> -->
-    </div>
-  </section>
+		<!-- 		<script>
+			var ws = new WebSocket("ws://localhost:9000/ws");
+			console.log(ws)
+		</script> -->
+	</div>
+</section>
 }

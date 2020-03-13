@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/gulshan/Documents/projects/rockwell_airport/collins2020/simulator/examples/hello-world/conf/routes
-// @DATE:Thu Mar 12 10:59:55 IST 2020
+// @DATE:Fri Mar 13 16:06:56 IST 2020
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -19,32 +19,12 @@ package controllers.javascript {
     }
 
   
-    // @LINE:6
-    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.index",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + """"})
-        }
-      """
-    )
-  
     // @LINE:8
     def tutorial: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.HomeController.tutorial",
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "tutorial"})
-        }
-      """
-    )
-  
-    // @LINE:7
-    def explore: JavaScriptReverseRoute = JavaScriptReverseRoute(
-      "controllers.HomeController.explore",
-      """
-        function() {
-          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "explore"})
         }
       """
     )
@@ -59,9 +39,49 @@ package controllers.javascript {
       """
     )
   
+    // @LINE:10
+    def socket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.socket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "ws"})
+        }
+      """
+    )
+  
+    // @LINE:7
+    def explore: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.explore",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "explore"})
+        }
+      """
+    )
+  
+    // @LINE:11
+    def jsonSocket: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.jsonSocket",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "jsonws"})
+        }
+      """
+    )
+  
+    // @LINE:6
+    def index: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.HomeController.index",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + """"})
+        }
+      """
+    )
+  
   }
 
-  // @LINE:13
+  // @LINE:15
   class ReverseAssets(_prefix: => String) {
 
     def _defaultPrefix: String = {
@@ -69,7 +89,7 @@ package controllers.javascript {
     }
 
   
-    // @LINE:13
+    // @LINE:15
     def versioned: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Assets.versioned",
       """
